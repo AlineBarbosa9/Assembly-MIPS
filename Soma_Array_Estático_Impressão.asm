@@ -11,7 +11,7 @@
 
 # Seção que Vai Somar Todos os Elementos do Array Declarado
 somatorio:
-	beq $t1,6,fim # Se Índice do Vetor ($t1) for Igual a 5, Vá Para 'fim'
+	beq $t1,6,fim # Se Índice do Vetor ($t1) for Igual a 6, Vá Para 'fim'
 	# Caso Contrário
 	move $t2,$t1 # Mova o Conteúdo de $t1 para $t2
 	sll $t2,$t2,2 # Multiplica o Índice Por 4 (Tamanho de um Inteiro)
