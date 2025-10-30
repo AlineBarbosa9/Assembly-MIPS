@@ -1,3 +1,8 @@
+# Este Programa em Assembly-MIPS obtém o Índice de 0 a 4
+# do Usuário e Determina qual Elemento do Array Estático
+# É Correspondente ao Índice Informado. Se o Valor Lido
+# For Maior que 4 ou Menor que 0, a Validação é Realizada
+
 # Seção em que os Dados São Declarados
 .data
 	array: .word 10,20,30,40,50 # Declaração de um Vetor Estático
