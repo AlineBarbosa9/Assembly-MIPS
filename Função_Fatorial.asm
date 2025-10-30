@@ -1,12 +1,3 @@
-# Laboratório 02 - Funções e Estruturas de Repetição
-# Exercício 01 - Cálculo de um Número Fatorial
-
-# Integrantes:
-# Aline Barbosa Vidal RA: 10721348
-# Beatriz Ferreira Vianna RA: 10729512
-# Kauê Lima Rodrigues Meneses RA: 10410594
-# Theo Esposito Resende RA: 10721356
-
 # Seção em que os Dados São Declarados
 .data
 	# Mensagens que Serão Exibidas ao Usuário
