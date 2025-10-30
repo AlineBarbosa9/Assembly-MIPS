@@ -1,3 +1,6 @@
+# Este Programa em Assembly-MIPS Faz a Soma de Todos os Elementos de Um Array Estático
+# e Imprime o Resultado Para o Usuário
+
 # Seção Em que Os Dados São Declarados
 .data
 	array: .word 20,30,55,51,64,95 # Declaração do Array Fixo
