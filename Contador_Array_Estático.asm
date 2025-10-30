@@ -1,3 +1,6 @@
+# Este Programa em Assembly-MIPS obtém um Valor do Usuário e Imprime
+# Quantos Valores do Array Estático Excedem Este Limite
+
 # Seção Em que Os Dados São Declarados
 .data
 
