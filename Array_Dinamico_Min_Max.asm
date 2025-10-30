@@ -1,3 +1,6 @@
+# Este Programa em Assembly_MIPS, Determina o Valor Mínimo e Máximo
+# De Um Array Dinâmico de Tamanho Definido Pelo Usuário
+
 # Seção em que os Dados São Declarados
 .data
 	# Mensagens que Serão Exibidas Para o Usuário
