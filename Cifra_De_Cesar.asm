@@ -9,15 +9,16 @@
 # Seção Onde as Instruções São Declaradas		
 .text
 main:
-	# Exibe o Prompt
+	# Exibe a Mensagem
 	li $v0, 4 # Comando para Impressão de String
 	la $a0, prompt_msg # Carrega o Prompt ao Registrador a0
 	syscall # Imprime a Mensagem na Tela
-	
-	li $v0, 8
-	la $a0, buffer_entrada # Carrega a Entrada ao Registrador a0
-	li $a1, 128
-	syscall
+
+	# Leitura de String
+	li $v0, 8 # Comando Para Leitura de String
+	la $a0, buffer_entrada # Carrega o Endereço de Entrada ao Registrador a0
+	li $a1, 128 # Número Máximo de Caracteres Lidos 
+	syscall # Faz a Leitura de String
 		
 	# Prepara Ponteiros para os Buffers
 	la $t0, buffer_entrada  # Ponteiro para a string original
