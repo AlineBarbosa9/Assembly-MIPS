@@ -23,40 +23,41 @@ main:
 	# Prepara Ponteiros para os Buffers
 	la $t0, buffer_entrada  # Ponteiro para a string original
 	la $t1, buffer_saida    # Ponteiro para a string de saida
-		
+
+# Controle de Loop e Finalização do Algoritmo
 loop_principal:
-	# Carrega o caractere atual da entrada
-	lb $a0, 0($t0)
+	# Carrega o Caractere Atual da Entrada
+	lb $a0, 0($t0) # Carrega um Único Byte de Memória ao Registrador $a0
 		
-	# [ Bloco 1 ] 
+	# Condicional de Parada:
 	beqz $a0, fim_loop # Vá para o Fim do Loop se Encontrar '\0'
 	
 	# Caso Contrário:		
-	# [ Bloco 2 ]
 	jal cifrar_char # Vai Para a Função cifrar_char
 		
-	# Armazena o caractere retornado ($v0) no buffer de saida
-	sb $v0, 0($t1)
+	# Armazena o Caractere Retornado ($v0) no Buffer de Saida
+	sb $v0, 0($t1) # Arnazena o Byte no Registrador $v0
 		
-	# Avanca os ponteiros para o proximo caractere
-	addi $t0, $t0, 1
+	# Avança os Ponteiros Para o Próximo Caractere
+	addi $t0, $t0, 1 # 1 Byte = Tamanho de um Char
 	addi $t1, $t1, 1
-	j loop_principal
+	j loop_principal # Volte ao Loop Principal
 
 # Seção que Marca a Impressão de Resultados e Finaliza o Programa		
 fim_loop:
 	sb $zero, 0($t1) # Garante o terminador nulo na string de saida
 	
-	# Exibe a mensagem final
+	# Exibe a mensagem FInal
 	li $v0, 4 # Comando para Impressão de String
 	la $a0, result_msg # Carrega a String ao Registrador a0
 	syscall # Imprime a Mensagem
-	
-	li $v0, 4
-	la $a0, buffer_saida
-	syscall
+
+	# Impressão da Mensagem Criptografada
+	li $v0, 4 # Comando Para Impressão de String
+	la $a0, buffer_saida # Carrega o Endereço do Buffer de Saída ao Registrador $a0
+	syscall # Imprime a Mensagem Codificada
 		
-	# Finaliza o programa
+	# Finaliza o Programa
 	li $v0, 10 # Comando para Encerrar o Programa
 	syscall # Encerra o Programa
 		
