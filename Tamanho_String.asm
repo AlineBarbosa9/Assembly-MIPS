@@ -2,6 +2,7 @@
 # Este Programa em Assembly-MIPS Faz a Leitura de uma String
 # de Até 128 Caracteres e Imprime seu Tamanho na Tela
 # -----------------------------------------------------------
+
 # Seção onde os Dados são Declarados
 .data
 	# Mensagens que Serão Exibidas ao Usuário
