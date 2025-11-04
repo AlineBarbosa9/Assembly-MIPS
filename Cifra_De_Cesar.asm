@@ -21,8 +21,8 @@ main:
 	syscall # Faz a Leitura de String
 		
 	# Prepara Ponteiros para os Buffers
-	la $t0, buffer_entrada  # Ponteiro para a string original
-	la $t1, buffer_saida    # Ponteiro para a string de saida
+	la $t0, buffer_entrada  # Ponteiro para a String Original
+	la $t1, buffer_saida    # Ponteiro para a String de Saída
 
 # Controle de Loop e Finalização do Algoritmo
 loop_principal:
@@ -63,22 +63,22 @@ fim_loop:
 		
 # --------------------------------------------------------------------
 # Funcao: cifrar_char
-# Descricao: Criptografa um unico caractere.
-# Argumentos: $a0 = O caractere original.
-# Retorno: $v0 = O caractere criptografado.
+# Descricao: Criptografa um Único Caractere.
+# Argumentos: $a0 = O Caractere Original.
+# Retorno: $v0 = O Caractere Criptografado.
 # --------------------------------------------------------------------
 cifrar_char:
-	# [ Bloco 3 ]	
-	move $v0,$a0 # Move o Conteúdo de $a0 para $t0
+	move $v0,$a0 # Move o Conteúdo de $a0 para $v0
 	
 	# Registradores Para Comparação de Caracteres
 	li $t2, 'A' # Carrega em $t2 o Valor 'A'
 	li $t3, 'Z' # Carrega em $t3 o Valor 'Z'
 	
-	blt $a0, $t2, verifica_minuscula # Se char < a, 
+	blt $a0, $t2, verifica_minuscula # Se Char < A, 
 	bgt $a0, $t3, verifica_minuscula # Se char > Z, 
+
 	# Caso Contrário:
-	addi $v0,$a0,3 # Adicione +3 ao Valor do Char Atual
+	addi $v0,$a0,3 # Adicione + 3 ao Valor do Char Atual
 	li $t4,'Z' # Carrega em $t4 o Valor 'Z'
 	ble $v0, $t4,fim_cifra # Se char <= Z Vá para o Fim Cifra
 	# Caso Contrário:
@@ -101,7 +101,6 @@ verifica_minuscula:
 	
 # Fim da Função:			
 fim_cifra:
-	# [ Bloco 4 ]
 	jr $ra # Retorna Para Quem Chamou	
 	# :)
 	
