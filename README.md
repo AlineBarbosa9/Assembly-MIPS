@@ -9,8 +9,7 @@ pelo **Prof. Jean Marcos Laine** na disciplina de **Organização de Computadore
 
 ## 📘 Objetivo 
 
-Este repositório tem como objetivo auxiliar no aprendizado de **Programação em Assembly MIPS**, 
-abordando desde operações simples com registradores e syscalls até estruturas mais complexas envolvendo funções, 
+Este repositório tem como objetivo auxiliar no aprendizado de **Programação em Assembly MIPS**, abordando desde operações simples com registradores e syscalls até estruturas mais complexas envolvendo funções, 
 pilhas, alocação dinâmica e listas ligadas. 
 
 --- 
