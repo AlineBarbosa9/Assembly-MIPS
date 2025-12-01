@@ -17,7 +17,7 @@ main:
     	# Registradores de Controle:
     	move $s0,$zero          # $s0 -> Contador (índice do array)
     	move $s4,$zero          # $s4 -> Head da Lista, Inicialmente NULL
-   	move $s5,$zero          # $s5 -> Tail da Lista, Inicialmente NULL
+   	    move $s5,$zero          # $s5 -> Tail da Lista, Inicialmente NULL
     
     	la $s1,array            # Carrega o Endereço Inicial do Array em $s1
     	li $s2,5                # $s2 -> Quantidade De Números Que Serão Inseridos
