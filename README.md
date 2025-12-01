@@ -45,7 +45,6 @@ Explora recursão, alocação dinâmica e estruturas encadeadas.
 - **C2:** Ordenação de Array Dinâmico (Bubble Sort)  
 - **C3:** Criação e Impressão de Sequência Dinâmica  
 - **C4:** Lista Ligada – Inserção e Impressão  
-- **C5:** Busca em Lista Ligada  
 
 ### ⚙️ Exercícios Adicionais
 Para praticar conceitos complementares de strings, bits e estruturas de dados.
